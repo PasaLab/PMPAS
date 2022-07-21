@@ -1,0 +1,7 @@
+# todo 修改需要忽略的git文件
+*log
+/results/*
+*.log
+**/results
+/core/datasets/
+/experiment_results/
