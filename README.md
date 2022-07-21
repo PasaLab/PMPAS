@@ -1,29 +1,10 @@
-<<<<<<< HEAD
-### Hi there 👋
+# 渐进式深度集成架构搜索算法研究
+## 环境安装
+进入到系统的目录下，使用pip –r install requirements.txt命令进行安装
+## 快速开始
+对于论文里的实验，主要是scripts目录下的各个文件运行产生的，该目录下的各个文件夹和文件包含了对集群实验的设置，其主要命令也是通过python –m xxx。下面以benchmarks目录下的bdas_cell.py文件的运行说明为例，具体的运行命令为：
+```python
+python -m benchamarks.bdas_cell [-d 11] [-s DAG] [-K 8] [-C 8] [--cell_time_limit=120] [--model_time_limit=960] [--strategy=best]
 
-<!--
-**PMPAS/PMPAS** is a ✨ _special_ ✨ repository because its `README.md` (this file) appears on your GitHub profile.
-
-Here are some ideas to get you started:
-
-- 🔭 I’m currently working on ...
-- 🌱 I’m currently learning ...
-- 👯 I’m looking to collaborate on ...
-- 🤔 I’m looking for help with ...
-- 💬 Ask me about ...
-- 📫 How to reach me: ...
-- 😄 Pronouns: ...
-- ⚡ Fun fact: ...
--->
-=======
-# 高效的深度集成架构搜索算法与系统研究
-
-- 在不同的目录下运行会将文件保存在不同的位置，如何让每次运行都保存在固定position
-- 在不同的目录运行会有不同的日志保存位置，如何统一保存的位置
-- 不同的目录下读取数据集会有问题
-- 添加测试代码,检验环境是否正确
-- 添加相应注释
-- 日志记录模块的保存路径需要修改
-- 分布式环境下日志会乱序
-- 搜索空间未完全统一
->>>>>>> f7c6a49 (first commit)
+# 其中-d 11指定数据集ID为11，-s DAG指定搜索空间为DAG，-K 8指定集束搜索参数为8，-C 8指定最大Cell数量为8，--cell_timme_limit=120指定每个Cell的最大运行时间为120，-- model_time_limit=960指定每个深度集成架构的运行时间为960秒，--strategy best指定每次保留最优的K个架构。
+```
